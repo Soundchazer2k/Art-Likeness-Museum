@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nano Banana Museum — Art Style Integrator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              // Light Mode Palette
+              'museum-bg': '#FDF8F0',
+              'museum-text': '#4A2E1F',
+              'museum-gold': '#C0A062',
+              'museum-brown': '#4A2E1F',
+              'museum-brown-darker': '#352116',
+              // Dark Mode "Museum After Hours" Palette
+              'dm-bg': '#1E1B16',
+              'dm-panel': '#2A2620',
+              'dm-frame': '#4B3F2F',
+              'dm-accent': '#C6A563',
+              'dm-text-primary': '#F0EDE6',
+              'dm-text-secondary': '#C9C4B8',
+              'dm-divider': '#3E3A33',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        /* The background color is now controlled by Tailwind classes in the App component */
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      .caption {
+        font-family: 'Source Serif Pro', serif;
+      }
+      /* Custom scrollbar for exhibit carousel */
+      .exhibit-carousel::-webkit-scrollbar {
+        height: 8px;
+      }
+      .exhibit-carousel::-webkit-scrollbar-track {
+        background: #FDF8F0;
+      }
+      .dark .exhibit-carousel::-webkit-scrollbar-track {
+        background: #1E1B16;
+      }
+      .exhibit-carousel::-webkit-scrollbar-thumb {
+        background: #C0A062;
+        border-radius: 4px;
+      }
+      .dark .exhibit-carousel::-webkit-scrollbar-thumb {
+        background: #4B3F2F;
+      }
+      .exhibit-carousel::-webkit-scrollbar-thumb:hover {
+        background: #a88c52;
+      }
+      .dark .exhibit-carousel::-webkit-scrollbar-thumb:hover {
+        background: #C6A563;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.16.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
